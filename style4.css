@@ -1,9 +1,12 @@
-.body{
+.body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;}
 
-	position: relative;
-}
-
-.contenedor{
+.contenedor {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -11,82 +14,140 @@
 
 	align-items: center;
 	text-align: center;
-	display:grid;
+	display: grid;
+	grid-gap: 8px;
 	grid-template-columns: 50px 300px 300px 300px 50px;
 	grid-template-rows: 50px 70px 70px 70px 70px 70px 70px 300px;
-	grid-template-areas: 
-	"cuad encabezadoa encabezadob encabezadoc btn "
-	"cuad	fila1 fila1 fila1 btn"
-	"cuad	fila2 fila2 fila2 btn"
-	"cuad	fila3 fila3 fila3 btn"
-	"cuad	fila4 fila4 fila4 btn"
-	"cuad	fila5 fila5 fila5 btn"
-	"cuad	fila6 fila6 fila6 btn"
-	"cuad	. imagen . .";
+	grid-template-areas:
+		"cuad encabezadoa encabezadob encabezadoc . "
+		"fila1	fila1 fila1 fila1 btn"
+		"fila2	fila2 fila2 fila2 btn"
+		"fila3	fila3 fila3 fila3 btn"
+		"fila4	fila4 fila4 fila4 btn"
+		"fila5	fila5 fila5 fila5 btn"
+		"fila6	fila6 fila6 fila6 btn"
+		".	. imagen . .";
 }
 
-h1{
- text-shadow:  2px 2px 5px red;
+
+.muñeco {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    animation: moverMuñeco 8s linear forwards;
+}
+
+
+@keyframes moverMuñeco {
+    0% {
+        left: 100%; 
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+    100% {
+        left: -50px; 
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+.cuad{
+	grid-area: cuad;
+	border: solid 2px black;
+	height: 45px;
+	width: 45px;
+
+	border-radius: 10px;
+	background-color: rgb(185, 184, 184);
+
+
+}
+
+.pokeball {
+	width: 70px;
+	background-image: url(./Imagenes/pokeballNegra.png);
+	background-size: contain;
+	background-repeat:no-repeat ;
+
+
+}
+.pokeball:hover {
+	width: 80px;
+	background-image: url(./Imagenes/pokeballRoja\ \(1\).png);
+	background-size: contain;
+	background-repeat:no-repeat ;
+
+}
+
+h1 {
+	text-shadow: 2px 2px 5px red;
 	color: black;
 	position: relative;
 	bottom: 150px;
-left: 400px;
+	left: 400px;
 }
 
-button{
+button {
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: auto;
- margin-bottom: auto;
- border-radius: 60px;
+	margin-bottom: auto;
+	border-radius: 60px;
 	height: 40px;
 	width: 40px;
+
+}
+
+
+
+.btn1:active {
+	background-image: url(./Imagenes/grass.png);
+	-webkit-background-size: cover;
 	
-}
-
-.btn1:active{
-	background-image: url(./Imagenes/grass.png);
-	-webkit-background-size: cover;
-;
 
 }
 
-.btn2:active{
-	background-image: url(./Imagenes/grass.png);
-	-webkit-background-size: cover;
-
-}
-.btn3:active{
+.btn2:active {
 	background-image: url(./Imagenes/grass.png);
 	-webkit-background-size: cover;
 
 }
 
-.btn4:active{
+.btn3:active {
+	background-image: url(./Imagenes/grass.png);
+	-webkit-background-size: cover;
+
+}
+
+.btn4:active {
 	background-image: url(./Imagenes/fire.png);
 	-webkit-background-size: cover;
 
 }
 
-.btn5:active{
-	background-image: url(./Imagenes/fire.png);
-	-webkit-background-size: cover;
-
-}
-.btn6:active{
+.btn5:active {
 	background-image: url(./Imagenes/fire.png);
 	-webkit-background-size: cover;
 
 }
 
+.btn6:active {
+	background-image: url(./Imagenes/fire.png);
+	-webkit-background-size: cover;
+
+}
 
 
-.btn{
+
+.btn {
 	grid-area: btn;
 
 }
 
-.encabezado-a, .encabezado-b, .encabezado-c{
+.encabezado-a,
+.encabezado-b,
+.encabezado-c {
 	border-top: 2px solid black;
 	border-left: 2px solid black;
 	border-right: 2px solid black;
@@ -96,151 +157,164 @@ button{
 	text-align: center;
 }
 
- .casilla{
-text-align: center;
+.casilla {
+	text-align: center;
 	width: 300px;
 	height: 70px;
-} 
+}
 
-.fila1, .fila3, .fila5 {
+.fila1,
+.fila3,
+.fila5 {
 	border-radius: 10px;
 	border: 2px solid black;
 	background-color: rgba(61, 124, 202, 0.247);
 }
 
-.fila2, .fila4, .fila6 {
+.fila2,
+.fila4,
+.fila6 {
 	border-radius: 10px;
 
 	border: 2px solid black;
 	background-color: rgba(255, 205, 5, 0.226);
 }
 
-.fila1:hover, .fila3:hover, .fila5:hover {
+.fila1:hover,
+.fila3:hover,
+.fila5:hover {
 	background-color: rgb(61, 124, 202);
 }
 
-.fila2:hover, .fila4:hover, .fila6:hover {
+.fila2:hover,
+.fila4:hover,
+.fila6:hover {
 	background-color: rgba(255, 205, 5, 0.925);
 }
 
-.encabezado-b{
+.encabezado-b {
 	grid-area: encabezadob;
 }
 
-.encabezado-a{
+.encabezado-a {
 	grid-area: encabezadoa;
 }
 
-.encabezado-c{
+.encabezado-c {
 	grid-area: encabezadoc;
 }
-.fila1, .fila2, .fila3, .fila4, .fila5, .fila6 {
+
+.fila1,
+.fila2,
+.fila3,
+.fila4,
+.fila5,
+.fila6 {
 	display: flex;
 	flex-direction: row
 }
-.fila1{
+
+.fila1 {
 	grid-area: fila1;
-	
+
 }
 
-.fila2{
+.fila2 {
 	grid-area: fila2;
 }
 
-.fila3{
+.fila3 {
 	grid-area: fila3;
 }
 
-.fila4{
+.fila4 {
 	grid-area: fila4;
 }
 
-.fila5{
+.fila5 {
 	grid-area: fila5;
 }
 
-.fila6{
+.fila6 {
 	grid-area: fila6;
 }
 
-.fila1:hover{
+.fila1:hover {
 
 	border: 2px solid rgb(224, 13, 13);
 }
 
-.fila2:hover{
-	border: 2px solid rgb(224, 13, 13);
-
-
-}
-
-.fila3:hover{
+.fila2:hover {
 	border: 2px solid rgb(224, 13, 13);
 
 
 }
 
-.fila4:hover{
+.fila3:hover {
 	border: 2px solid rgb(224, 13, 13);
 
 
 }
 
-.fila5:hover{
+.fila4:hover {
+	border: 2px solid rgb(224, 13, 13);
+
+
+}
+
+.fila5:hover {
 	border: 2px solid rgb(224, 13, 13);
 
 }
 
-.fila6:hover .imagen{
+.fila6:hover .imagen {
 	border: 2px solid rgb(224, 13, 13);
 
 }
 
-.imagen{
+.imagen {
 	border: solid 2px black;
-    grid-area: imagen;
-    height: 300px;
-    width: 300px;
-    background-color: rgb(174, 175, 175);
-    border-radius: 40px;
+	grid-area: imagen;
+	height: 300px;
+	width: 300px;
+	background-color: rgb(174, 175, 175);
+	border-radius: 40px;
+	transition: background-image 0.3s ease;
+
 
 
 }
 
-.fila1:hover ~ .imagen{
-	background-image:  url(./Imagenes/001.png);
+
+
+
+
+
+.fila1:hover~.imagen {
+	background-image: url(./Imagenes/001.png);
 	-webkit-background-size: cover;
 
 }
 
 
 
-.fila2:hover ~ .imagen{
-	background-image:  url(./Imagenes/002.png);
+.fila2:hover~.imagen {
+	background-image: url(./Imagenes/002.png);
 	-webkit-background-size: cover;
 
 
 
 }
 
-.fila3:hover ~ .imagen{
-	background-image:  url(./Imagenes/003.png);
+.fila3:hover~.imagen {
+	background-image: url(./Imagenes/003.png);
 	-webkit-background-size: cover;
 
 
 }
 
-.fila4:hover ~ .imagen{
-	background-image:  url(./Imagenes/004.png);
-	-webkit-background-size: cover;
-
-
-
-}
-
-
-.fila5:hover ~ .imagen{
-	background-image:  url(./Imagenes/005.png);
+.fila4:hover~.imagen {
+	background-image: url(./Imagenes/004.png);
 	-webkit-background-size: cover;
 
 
@@ -248,9 +322,8 @@ text-align: center;
 }
 
 
-
-.fila6:hover ~ .imagen{
-	background-image:  url(./Imagenes/006.png);
+.fila5:hover~.imagen {
+	background-image: url(./Imagenes/005.png);
 	-webkit-background-size: cover;
 
 
@@ -259,4 +332,10 @@ text-align: center;
 
 
 
+.fila6:hover~.imagen {
+	background-image: url(./Imagenes/006.png);
+	-webkit-background-size: cover;
 
+
+
+}
