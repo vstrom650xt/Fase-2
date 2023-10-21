@@ -1,10 +1,14 @@
-.body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;}
+body {
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-image: url('./Imagenes/fondo.jpg');
+
+
+}
+
 
 .contenedor {
 	position: absolute;
@@ -31,61 +35,67 @@
 
 
 .muñeco {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 80%;
-    left: 0;
-    animation: moverMuñeco 8s linear forwards;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 80%;
+	left: 0;
+	animation: moverMuñeco 8s linear forwards ;
 }
 
 
 @keyframes moverMuñeco {
-    0% {
-        left: 100%; 
-        transform: translateY(-50%);
-        opacity: 1;
-    }
-    100% {
-        left: -50px; 
-        transform: translateY(-50%);
-        opacity: 0;
-    }
+	0% {
+		left: 90%;
+		transform: translateY(-50%);
+		opacity: 1;
+	}
+
+	99.99% {
+		transform: translateY(-50%);
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
 }
-.cuad{
+
+.cuad {
 	grid-area: cuad;
 	border: solid 2px black;
 	height: 45px;
 	width: 45px;
-
 	border-radius: 10px;
 	background-color: rgb(185, 184, 184);
-
-
 }
+
+
+
 
 .pokeball {
 	width: 70px;
 	background-image: url(./Imagenes/pokeballNegra.png);
 	background-size: contain;
-	background-repeat:no-repeat ;
+	background-repeat: no-repeat;
 
 
 }
+
 .pokeball:hover {
 	width: 80px;
 	background-image: url(./Imagenes/pokeballRoja\ \(1\).png);
 	background-size: contain;
-	background-repeat:no-repeat ;
+	background-repeat: no-repeat;
 
 }
 
 h1 {
 	text-shadow: 2px 2px 5px red;
 	color: black;
-	position: relative;
-	bottom: 150px;
-	left: 400px;
+	position: absolute;
+	top: -80px;
+	left: 40%;
 }
 
 button {
@@ -104,7 +114,7 @@ button {
 .btn1:active {
 	background-image: url(./Imagenes/grass.png);
 	-webkit-background-size: cover;
-	
+
 
 }
 
@@ -168,7 +178,7 @@ button {
 .fila5 {
 	border-radius: 10px;
 	border: 2px solid black;
-	background-color: rgba(61, 124, 202, 0.247);
+	background-color: rgba(61, 124, 202, 0.9);
 }
 
 .fila2,
@@ -177,7 +187,7 @@ button {
 	border-radius: 10px;
 
 	border: 2px solid black;
-	background-color: rgba(255, 205, 5, 0.226);
+	background-color: rgba(255, 205, 5, 0.9);
 }
 
 .fila1:hover,
@@ -279,7 +289,8 @@ button {
 	width: 300px;
 	background-color: rgb(174, 175, 175);
 	border-radius: 40px;
-	transition: background-image 0.3s ease;
+	transition: background-image 0.5s ease;
+	/*esto va a veces*/
 
 
 
@@ -288,6 +299,13 @@ button {
 
 
 
+.cuad:hover~.imagen {
+
+	background-image: url(./Imagenes/cat.PNG);
+
+	-webkit-background-size: cover;
+
+}
 
 
 .fila1:hover~.imagen {
